@@ -1,22 +1,38 @@
-<?php
-include 'env.php';
-// Connect
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn && $conn->connect_error) {
-  echo "Connection failed: " . $conn->connect_error;
-}
+<?php include 'database.php';
+var_dump($rooms);
+;?>
 
-$sql = "SELECT room_number, floor FROM stanze";
-$result = $conn->query($sql);
-if ($result && $result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "Stanza N. ". $row['room_number']. " piano: ".$row['floor'];
-  }
-} elseif ($result) {
-  echo "0 results";
-} else {
-  echo "query error";
-}
-$conn->close();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/app.css">
+  <title>Hotel CRUD</title>
+</head>
+<body>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Room Number</th>
+      <th>Floor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach ($rooms as $room): ?>
+      <tr>
+        <td><?php echo $room[room_number] ?></td>
+        <td><?php echo $room[floor] ?></td>
+        <td><a href="show/index.php?id=<?php echo $room[id]?>">VIEW</a></td>
+        <td><a href="">UPDATE</a></td>
+        <td>DELETE</td>
+      </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
+</body>
+</html>
