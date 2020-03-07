@@ -1,4 +1,4 @@
-<?php include 'database.php';
+<?php include __DIR__ . '/../database.php';
 $idroom = $_GET["id"];
 $sql = "SELECT * FROM stanze WHERE id = $idroom";
 $result = $conn->query($sql);
