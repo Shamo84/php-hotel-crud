@@ -1,16 +1,22 @@
 <?php include __DIR__ . '/../database.php';
 $idroom = $_POST["id"];
-$sql = "DELETE FROM stanze WHERE id = $idroom";
+
+$sql = "SELECT * FROM stanze WHERE id = $idroom";
 $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
-  // output data of each row
+  $sql = "DELETE FROM stanze WHERE id = $idroom";
+  $result = $conn->query($sql);
 
-$room = $result->fetch_assoc();
+  if ($result) {
 
-} elseif ($result) {
-  echo "0 results";
+    header('Location: http://localhost/php-hotel-crud/?roomID=' . $idroom);
+  } else {
+    echo "query error";
+  }
+
 } else {
-  echo "query error";
+  echo "questo id non esiste";
 }
+
 $conn->close();
