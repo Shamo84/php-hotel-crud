@@ -1,6 +1,6 @@
 <?php include 'database.php';
-$idroom = $_GET["id"];
-$sql = "SELECT * FROM stanze WHERE id = $idroom";
+$idroom = $_POST["id"];
+$sql = "DELETE FROM stanze WHERE id = $idroom";
 $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
