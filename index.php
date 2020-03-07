@@ -2,11 +2,11 @@
 include 'server.php';
 include 'partials/header.php';
 ;?>
-<?php if (!empty($_GET["roomID"])): ?>
-  <div class="alert alert-danger" role="alert">
-    hai cancellato la stanza con ID: <?php echo $_GET["roomID"]?>
-  </div>
 
+<?php if (!empty($_GET["roomNumber"])): ?>
+  <div class="alert alert-danger" role="alert">
+    hai cancellato la stanza numero: <?php echo $_GET["roomNumber"]?>
+  </div>
 <?php endif; ?>
 
 <table class="table">
