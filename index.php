@@ -14,9 +14,11 @@ include 'partials/header.php';
     <tr>
       <th>Room Number</th>
       <th>Floor</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>
+        <form action="insert/insert.php" method="post">
+          <input type="submit" class="btn-primary" value="INSERT">
+        </form>
+      </th>
     </tr>
   </thead>
   <tbody>
