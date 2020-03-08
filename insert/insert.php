@@ -20,7 +20,7 @@ include __DIR__ . '/../partials/header.php';
           <input class="form-control" type="text" name="beds" value="" placeholder="inserisci il numero di letti">
         </div>
         <form action="server.php" method="post">
-          <input class="form-control" class="btn-primary" type="submit" value="GENERATE">
+          <input class="btn-primary form-control" type="submit" value="GENERATE">
         </form>
         </div>
       </form>

@@ -23,7 +23,6 @@ include __DIR__ . '/../partials/header.php';
           <input type="hidden" name="id" value="<?php echo $room[id];?>">
           <input class="form-control" class="btn-primary" type="submit" value="UPDATE">
         </form>
-        </div>
       </form>
     </div>
   </div>
