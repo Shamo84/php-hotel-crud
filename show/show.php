@@ -1,6 +1,9 @@
-<?php include 'server.php';
+<?php
+include 'server.php';
 include __DIR__ . '/../partials/header.php';
+
 ?>
+
 
 
   <div class="container">

@@ -1,4 +1,5 @@
-<?php include __DIR__ . '/../database.php';
+<?php
+include __DIR__ . '/../database.php';
 $idroom = $_POST["id"];
 
 $sql = "SELECT * FROM stanze WHERE id = $idroom";

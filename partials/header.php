@@ -8,3 +8,9 @@
   <title>Hotel CRUD</title>
 </head>
 <body>
+  <nav class="navbar navbar-dark bg-dark mb-5 px-5">
+    <a class="navbar-brand" href="http://localhost/php-hotel-crud">Hotel Booleana</a>
+    <form action="insert/insert.php" method="post">
+      <input type="submit" class="btn-primary" value="INSERISCI NUOVA STANZA">
+    </form>
+  </nav>
